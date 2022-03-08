@@ -1,8 +1,7 @@
 import React from "react"
 import Store from "./Store"
 
-function StoreList() {
-
+function StoreList({storeList}) {
 
     return(
         <table>
@@ -21,7 +20,11 @@ function StoreList() {
                         Episode
                     </th>
                 </tr>
-                {/** Render a list of <Store> components here. */}
+                {
+                    storeList.map(stores => {
+                        return <store key={stores.id} stores={stores}/>
+                    })
+                }
             </tbody>
         
         </table>

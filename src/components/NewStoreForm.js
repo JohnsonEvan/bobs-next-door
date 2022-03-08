@@ -1,6 +1,12 @@
 import React from "react"
 
-function NewStoreForm() {
+function NewStoreForm(onNewStore) {
+
+function handleFormSubmit(event){
+    event.preventDefault();
+
+    const selectElement = event.target[]
+}
 
     return(
         <form>
